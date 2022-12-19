@@ -1,0 +1,47 @@
+
+
+
++++++Conteúdos das Filas de Cada Pista+++++
+--------Pista 1--------
+********Prateleira de Aterragem 1*********
+Total de Aviões: 1
+{ID: 65 } - { Unidade de Tempo: 3 }
+********Prateleira de Aterragem 2*********
+Total de Aviões: 1
+{ID: 63 } - { Unidade de Tempo: 17 }
+*******Fila de Espera para Decolagem******
+Total de Aviões: 1
+{ID: 38 } - { Unidade de Tempo: -1 }
+------------------------------------------------
+
+--------Pista 2--------
+********Prateleira de Aterragem 1*********
+Total de Aviões: 1
+{ID: 67 } - { Unidade de Tempo: 8 }
+********Prateleira de Aterragem 2*********
+Total de Aviões: 1
+{ID: 43 } - { Unidade de Tempo: 8 }
+*******Fila de Espera para Decolagem******
+Total de Aviões: 2
+{ID: 56 } - { Unidade de Tempo: -1 }
+{ID: 58 } - { Unidade de Tempo: -1 }
+------------------------------------------------
+
+--------Pista 3--------
+********Prateleira de Aterragem 1*********
+Total de Aviões: 0
+********Prateleira de Aterragem 2*********
+Total de Aviões: 0
+*******Fila de Espera para Decolagem******
+Total de Aviões: 1
+{ID: 58 } - { Unidade de Tempo: -1 }
+------------------------------------------------
+
+++++++++++++++++++++++++++++++++++++++++++
+Até ao momento Decolaram: 22.0 Aviões
+Tempo médio para Decolagem: 1.1818181 Segundos
+Até ao momento Aterraram: 30.0 Aviões
+Tempo médio para Aterragem: 1.1333333 Segundos
+Número de Aviões que aterraram sem Reserva de Combustível: 5
+
+
