@@ -1,0 +1,13 @@
+body
+{
+	text-align:center;
+	justify-content:center;
+}
+
+#campo
+{
+	position:relative;
+	background:#0A81EC;
+	border-radius:5%;
+	border:2px solid #d00;
+}
