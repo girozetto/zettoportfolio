@@ -1,0 +1,34 @@
+html,body{
+	font-family:monospace;
+}
+.matriz
+{
+	text-align:center;
+}
+.zonas
+{
+	text-align:center;
+	font-size:18px;
+}
+.descricao
+{
+	text-align:center;
+}
+input
+{
+	margin: 3px;
+}
+span
+{
+	padding: 5px;
+}
+h1 
+{
+	text-align:center;
+}
+table
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+}
