@@ -1,0 +1,18 @@
+html,body{
+	font-family:monospace;
+}
+.cobra
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+input
+{
+	margin: 3px;
+}
+h1 
+{
+	text-align:center;
+}
