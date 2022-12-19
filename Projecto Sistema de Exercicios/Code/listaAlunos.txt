@@ -1,0 +1,7 @@
+1995 Maluma-Mboco 31-01-1995 4 moco moco
+2001 Alipio-Nunes 30-05-2001 2 nunes 1234
+2000 Tumbica-Mbimbi 22-07-2000 2 mbimbi 1234
+2005 Joao-Panzo 17-06-2000 5 joaop 1234
+1999 Pedro-Mbote 20-10-1999 5 pmbote 1234
+2009 Gilmar-Muteba 11-11-1999 5 gilmuteba 1234
+2002 Mario-Pedro 30-05-2002 6 mpedro mpedro

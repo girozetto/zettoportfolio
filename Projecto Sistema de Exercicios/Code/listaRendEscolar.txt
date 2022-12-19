@@ -1,0 +1,3 @@
+2300 1995 15,00 9,00 null null null null 0,00 0,00 0,00 0,00
+2300 2001 10,00 7,00 Arroz-mais-feijao Funge-mais-molho arroz-com-salsicha lula-molhada-na-sopinha 12,00 8,00 15,00 12,00
+2300 1999 6,00 10,00 Arroz-Com-Qualquer-Coisa Mar-Vento-E-Sol 50-Tons-de-Cinza Um-Casal-de-Fachada-em-Paris 17,00 15,00 16,00 18,00

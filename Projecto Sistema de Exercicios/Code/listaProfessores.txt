@@ -1,0 +1,7 @@
+1989 Gilberto-Vunge prof-assistente 30-07-1989 gil 1234
+1999 Monkey-D.-Luffy Coordenador-da-Tarde 05-09-1999 luffy luffy
+2000 Menas-Boy Decano 25-07-2000 menas boy
+1980 Michael-Miller Professor-Auxiliar 30-01-1980 miller 1234
+1997 Pedro-Mbote Vice-Decano 23-09-1989 panzo 1234
+2002 Mbote-Pedro Professor 09-03-2002 mbote 1234
+1978 Pedro-Muanza Auxiliar 20-09-1978 pedrito pedro

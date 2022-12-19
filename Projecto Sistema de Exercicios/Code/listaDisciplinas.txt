@@ -1,0 +1,7 @@
+2022 Fisica Conceitos-Elementares-Fundamentais
+2023 Analise-Matematica-I Conceitos-de-Derivada
+2050 Analise-Matematica-II Conceitos-de-Integrais-Multiplas
+2029 Fundamentos-de-Programacao-I Linguagem-C-e-Logica-de-Programacao
+2042 Algoritmos-e-Complexidade Conceitos-de-Estrutura-de-Dados-em-C
+2072 Sistemas-Operativos-I Shell-Script-do-Linux
+2067 Sistemas-Operativos-II Processos-Computacionais
