@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> YetuMotors | Iniciar Sessao e Cadastro</title>
+    <link rel="stylesheet" href="../css/styleLogin.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="contentor">
+
+        <input type="checkbox" id="folha">
+
+        <div class="imgLado">
+            <div class="front">
+                <img src="../img/yellow-sport-car-with-black-autotuning-road.jpg" alt="Imagem Login">
+                <div class="texto">
+                <span class="texto-1">Cada novo amigo é uma <br> nova aventura</span>
+                <span class="texto-2">Vamos nos conectar</span>
+                </div>
+            </div>
+
+            <div class="back">
+                <img class="backImg" src="images/register.jpg" alt="Imagem Cadastro">
+                <div class="texto">
+                <span class="texto-1">Compelte sua jornada <br> </span>
+                <span class="texto-2">Vamos começar</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="formulario">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="titulo">Login</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Digite seu email" id="emailE"required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Digite sua senha" id="senhaE"required>
+                        </div>
+                        <div class="text"><a href="#">Esqueceu a senha?</a></div>
+                        <div class="btn input-box">
+                            <input type="button" value="Entrar" id="entrar">
+                        </div>
+                        <div class="text sign-up-texto">Não tem uma conta? <label for="folha">Inscreva-se agora</label></div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="signup-form">
+                    <div class="titulo">Inscrever-se</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Digite seu nome" required>
+                            </div>
+
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Digite sua password" required>
+                            </div>
+                            <div class="btn input-box">
+                                <input type="submit" value="Cadastrar-se">
+                            </div>
+                            <div class="text sign-up-texto">Já tem uma conta? <label for="folha">Conecte-se agora</label></div>
+                        </div>
+                    </form>
+                </div>
+        
+            </div>
+
+        </div>
+
+  </div>
+  
+  <div class="home"><a href="../index.html"><i class="fas fa-home"></i> </a></div>
+	<script src="../script/scriptLogin.js"></script>
+</body>
+</html>

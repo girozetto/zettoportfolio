@@ -1,0 +1,490 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root
+{
+    --cor0: #d90429;
+    --cor-texto: #020102;
+    --cor-bg:#fff; 
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  /*background: #c8e8e9;*/
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('../img/driver-driving-car-interior-view.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header
+{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.down{
+   background: #fff;
+   box-shadow: 2px 4px 4px rgb(12 54 55 / 20%);
+   transition: .2s ease-in-out;
+   
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+}
+
+#menu-btn
+{
+    font-size: 24px;
+    cursor: pointer;
+    color:var(--cor-texto);
+    display: none;
+}
+
+.logo
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.logo span {color: var(--cor0);}
+
+.navbar
+{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navbar a{
+    color: var(--cor-bg);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .6s inherit;
+}
+header.down .navbar a, header.down 
+#pesquisa{
+  color: var(--cor-texto);
+}
+
+.activo
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+.navbar a:hover
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+
+#pesquisa
+{
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.bar-pesquisa
+{
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgb(12 54 55 / 10%);
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor0);
+    clip-path: circle(0% at 100% 0);
+}
+
+.bar-pesquisa.active{
+    clip-path: circle(142% at 100% 0);
+}
+
+.bar-pesquisa input {
+    width: 100%;
+    padding: 2px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+
+
+.contentor{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.contentor .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentor .content .esquerda{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .esquerda::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .esquerda .detalhes{
+  margin: 14px;
+  text-align: center;
+}
+.content .esquerda .detalhes i{
+  font-size: 30px;
+  color: var(--cor0);
+  margin-bottom: 10px;
+}
+.content .esquerda .detalhes .topico{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .esquerda .detalhes .text-one,
+.content .esquerda .detalhes .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+
+
+.contentor .content .direita{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .direita .banner{
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--cor0);
+}
+.direita .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.direita .input-box input,
+.direita .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.direita .message-box{
+  min-height: 110px;
+}
+.direita .input-box textarea{
+  padding-top: 6px;
+}
+.direita .btn{
+  display: inline-block;
+  margin-top: 12px;
+}
+.direita .btn input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--cor0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn input[type="button"]:hover{
+  background: #d904277c;
+}
+
+
+.contentoX
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape
+{
+    margin-top:30px ;
+    background-color: #020102;
+    color: #eeeded;
+    padding: 2rem 6%;
+    border-top: 2px solid #d90429;
+}
+
+.footer-contentor
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-contentor .logo
+{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-contentor .footer-box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+}
+
+.social a
+{
+    color: white;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.footer-box h3
+{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a
+{
+    color: #818181;
+    margin-bottom: 10px;
+}
+.footer-box a:hover{ color: #d90429;}
+
+.copy
+{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+  .contentor{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .contentor .content .direita{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .contentor{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .contentor .content{
+    flex-direction: column-reverse;
+  }
+ .contentor .content .esquerda{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .contentor .content .esquerda::before{
+   display: none;
+ }
+ .contentor .content .direita{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+
+
+
+
+
+@media(max-width: 1080px)
+{
+    .contentoX
+    {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .contentor{
+      margin: auto;
+      margin-top: 120px;
+    }
+}
+
+
+@media(max-width: 991px)
+{
+
+    .nav{   
+        padding: 15px 20px;
+    }
+
+    section{
+        padding: 3rem 0 1rem;
+    }
+
+    .texto
+    {
+        padding-left: 2rem;
+    }
+    .texto h1 { font-size: 2.1rem;}
+
+}
+
+@media(max-width: 920px)
+{
+    #pesquisa{
+        color: #fff;
+    }
+}
+
+@media(max-width: 775px)
+{
+    .bar-pesquisa i nput{
+        padding: 15px;
+    }
+    .nav
+    {
+        padding:10px 0;
+    }
+
+    #menu-btn
+    {
+        display: initial;
+        padding: 0 20px;
+    }
+    .navbar 
+    {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        row-gap: .5rem;
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(12 54 55 / 20%);
+        clip-path: circle(0% at 0% 0%);
+        transition: .5s ease-in-out;
+    }
+    .navbar a{
+        display: block;
+        padding: 15px;
+    }
+
+    .navbar a:hover,
+    .navbar .activo
+    {
+        border-bottom: none;
+        background: #d90429;
+        color: #fff ;
+    }
+
+    .navbar.active{
+        clip-path: circle(142% at 0% 0%);
+    }
+    .navbar.active .navbar a
+    {
+      color: #020102;
+    }
+}
+
+
+@media(max-width: 607px)
+{
+    .footer-contentor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 360px)
+{
+    .bar-pesquisa input{
+        padding: 11px;
+    }
+}
+
+/*__________ Scroll Bar_ ________________*/
+::-webkit-scrollbar
+{
+    background: #020102;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom,#fff,#020102); }
+/*______________________________________________*/

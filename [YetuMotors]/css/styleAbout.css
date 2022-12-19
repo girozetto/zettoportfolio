@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root
+{
+    --cor0: #d90429;
+    --cor-texto: #020102;
+    --cor-bg:#fff; 
+
+
+
+}
+
+/*html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}*/
+
+section
+{
+    padding: 4rem  6%;
+}
+footer
+{
+    padding: 4rem  6%;
+}
+
+header
+{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.down{
+   background: #fff;
+   box-shadow: 2px 4px 4px rgb(12 54 55 / 20%);
+   transition: .2s ease-in-out;
+}
+
+header.down .navbar a,header.down #pesquisa, header.down .logo, header.down #menu-btn{
+    color: var(--cor-texto);
+}
+
+.contentor
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+#menu-btn
+{
+    font-size: 24px;
+    cursor: pointer;
+    color:var(--cor-texto);
+    display: none;
+}
+
+.logo
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.logo span {color: var(--cor0);}
+
+.navbar
+{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navbar a{
+    color: var(--cor-texto);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .6s inherit;
+}
+.activo
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+.navbar a:hover
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+
+#pesquisa
+{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.bar-pesquisa
+{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgb(12 54 55 / 10%);
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor0);
+    clip-path: circle(0% at 100% 0);
+}
+
+.bar-pesquisa.active{
+    clip-path: circle(142% at 100% 0);
+}
+
+.bar-pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.home{
+    /*max-width: 100px;*/
+    margin: auto;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    background:url(../img/young-attractive-black-businessman-buys-new-car-he-signs-contract-takes-keys-manager.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+
+.home .texto{   padding-left: 120px; }
+
+.home .texto h1 { font-size: 2.4rem; color: rgb(0, 0, 0);}
+
+.home .texto span{ color: #d90429;}
+
+
+
+.btn {
+    padding: 10px 40px;
+    background: var(--cor0);
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.btn:hover {
+    color: #d90429;
+    background-color: white; 
+}
+
+
+
+
+
+
+.section
+{
+    padding: 0 9%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+}
+
+.about-section
+{
+    background: url(../img/abou.jpg) no-repeat;
+    background-size: 57%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 90px 0;
+}
+
+.container
+{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 60px;
+}
+
+.container h1
+{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 999;
+}
+
+.container p
+{
+    font-size: 13px;
+    color: #545454;
+    text-align: justify;
+    line-height: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 1248px){
+    .container{
+        padding: 40px;
+    }
+}
+
+
+
+@media screen and (max-width: 1143px)
+{
+    .about-section
+    {
+        background-size: 100%;
+        padding: 80px 40px;
+    }
+
+    .container{ width: 100%;}
+}
+
+@media screen and (max-width: 620px)
+{
+    .about-section
+    {
+        padding: 0px;
+    }
+
+    .container{ 
+        padding: 60px;
+    }
+}
+
+
+
+.teamX
+{
+    padding: 50px;
+    text-align: center;
+
+}
+
+.teamX h1
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+.teamX p
+{
+    font-size: 20px;
+}
+
+
+.f-icons {  float: right;}
+
+.f-icons a
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0;
+    background: #33383b;
+    border-radius: 2px;
+    color: #ffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right:3px;
+    margin-bottom: 5px;
+}
+
+.f-icons a:hover {background:var(--cor0);}
+
+
+
+
+.team
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  
+  .team .team_member{
+    background: rgb(221, 221, 221);
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;  
+    position: relative;
+  }
+  
+  .team .team_member h3{
+    color: #000000;
+    font-size: 26px;
+    margin-top: 65px;
+  }
+  
+  .team .team_member p.textoTeam{
+    color: rgb(226, 29, 29);
+    margin: 12px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  .team .team_member .team_img{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+  }
+  
+  .team .team_member .team_img img{
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  .team .icons
+  {
+    margin-top: 20px;
+  }
+  .team .icons i
+  {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background: #808080;
+      color: #fff;
+      font-size: 12px;
+      margin-right: .5rem;
+      cursor: pointer;
+  }
+  
+  .team .icons i:hover
+  {
+      background-color: #ec1911;
+      transition: .2s linear;
+  }
+  
+
+
+
+
+
+
+
+.rodape
+{
+    background-color: #020102;
+    color: #eeeded;
+    padding: 2rem 6%;
+    border-top: 2px solid #d90429;
+}
+
+.footer-contentor
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-contentor .logo
+{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-contentor .footer-box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+}
+
+.social a
+{
+    color: white;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.footer-box h3
+{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a
+{
+    color: #818181;
+    margin-bottom: 10px;
+}
+.footer-box a:hover{ color: #d90429;}
+
+.copy
+{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+@media(max-width: 1080px)
+{
+    .contentor
+    {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+
+@media(max-width: 991px)
+{
+    .nav{   
+        padding: 15px 20px;
+    }
+
+    section{
+        padding: 3rem 0 1rem;
+    }
+
+    .texto
+    {
+        padding-left: 2rem;
+    }
+    .texto h1 { font-size: 2.1rem;}
+
+}
+
+@media(max-width: 920px)
+{
+    #pesquisa{
+        color: #ffffff;
+    }
+}
+
+@media(max-width: 775px)
+{
+    .bar-pesquisa i nput{
+        padding: 15px;
+    }
+    .nav
+    {
+        padding:10px 0;
+    }
+
+    #menu-btn
+    {
+        display: initial;
+        padding: 0 20px;
+    }
+    .navbar 
+    {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        row-gap: .5rem;
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(12 54 55 / 20%);
+        clip-path: circle(0% at 0% 0%);
+        transition: .5s ease-in-out;
+    }
+    .navbar a{
+        display: block;
+        padding: 15px;
+    }
+
+    .navbar a:hover,
+    .navbar .activo
+    {
+        border-bottom: none;
+        background: #d90429;
+        color: #fff ;
+    }
+
+    .navbar.active{
+        clip-path: circle(142% at 0% 0%);
+    }
+
+}
+
+@media(max-width: 730px)
+{
+    
+    .heading span{
+        font-size: .9rem;
+    }
+
+    .heading h2{
+        font-size: 1.4rem;
+    }
+
+    .destaque{
+        flex-direction: column-reverse;
+    }
+
+    .dest-texto{
+        text-align: center;
+    }
+
+    .dest-texto h2{
+        font-size: 1.4rem;
+    }
+}
+
+
+@media(max-width: 607px)
+{
+    .footer-contentor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 360px)
+{
+    .bar-pesquisa input{
+        padding: 11px;
+    }
+
+    .home
+    {
+        min-height: 500px;
+    }
+
+    .home h1{
+        font-size: 2rem;
+    }
+
+    .home p br{
+        display: contents;
+    }
+}
+
+/*__________ Scroll Bar_ ________________*/
+::-webkit-scrollbar
+{
+    background: #020102;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom,#fff,#020102); }
+/*______________________________________________*/

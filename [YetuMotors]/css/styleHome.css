@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root
+{
+    --cor0: #d90429;
+    --cor-texto: #020102;
+    --cor-bg:#fff; 
+}
+
+img{ width: 100%}
+
+body{
+    color: var(--cor-texto);
+}
+
+section
+{
+    padding: 4rem  6%;
+}
+footer
+{
+    padding: 4rem  6%;
+}
+
+header
+{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.down{
+   background: #fff;
+   box-shadow: 2px 4px 4px rgb(12 54 55 / 20%);
+   transition: .2s ease-in-out;
+}
+
+.contentor
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+#menu-btn
+{
+    font-size: 24px;
+    cursor: pointer;
+    color:var(--cor-texto);
+    display: none;
+}
+
+.logo
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.logo span {color: var(--cor0);}
+
+.navbar
+{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navbar a{
+    color: var(--cor-texto);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .6s inherit;
+}
+.activo
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+.navbar a:hover
+{
+    color: var(--cor0);
+    border-bottom: 3px solid var(--cor0);
+}
+
+#pesquisa
+{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.bar-pesquisa
+{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgb(12 54 55 / 10%);
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor0);
+    clip-path: circle(0% at 100% 0);
+}
+
+.bar-pesquisa.active{
+    clip-path: circle(142% at 100% 0);
+}
+
+.bar-pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.home{
+    /*max-width: 100px;*/
+    margin: auto;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    background:url(../img/back\ -\ Copia.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+
+.home .texto{   padding-left: 120px; }
+
+.home .texto h1 { font-size: 2.4rem;}
+
+.home .texto span{ color: #d90429;}
+
+.home .texto p {
+    font-size: 0.948rem;
+    font-weight: 300px;
+    margin: 0.5rem 0 1.2rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.btn {
+    padding: 10px 40px;
+    background: var(--cor0);
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.btn:hover {
+    color: #d90429;
+    background-color: white; 
+}
+
+.heading {  text-align: center; }
+
+.heading span {
+    font-weight: 500;
+    color: var(--cor0);
+}
+
+.heading p {
+    font-size: 0.950rem;
+    font-weight: 300;
+}
+
+.box-contentor {
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-top: 2rem;
+}
+
+.box-contentor .box {
+    flex: 1 1 20rem;
+    position: relative;
+    height: 200px;
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+.box-contentor .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.box-contentor .box img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.box-contentor .box h2 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400px;
+    font-size: 1rem;
+    background: #fff;
+    padding: 8px;
+}
+
+
+.destaque {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.dest-img{  flex: 1 1 21rem;}
+
+.dest-texto{    flex: 1 1 21rem;}
+
+.dest-texto span{
+    font-weight: 500;
+    color: var(--cor0);
+}
+
+.dest-texto h2{ font-size: 1.7rem;}
+
+.dest-texto p{
+    font-size: 0.938rem;
+    margin: .5rem 0 1.4rem;
+}
+
+.pecas-contentor 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-top: 2rem;
+}
+
+.pecas-contentor .box
+{
+    flex: 1 1 20rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background: #eeeded;
+}
+
+.pecas-contentor .box img
+{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.pecas-contentor .box h3
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pecas-contentor .box span
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #d90429;
+}
+
+.pecas-contentor .box .fas
+{
+    margin: .8rem  0;
+}
+
+.pecas-contentor .box .btn
+{
+    max-width: 150px;
+}
+
+.pecas-contentor .detalhe
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
+.pecas-contentor .detalhe:hover
+{
+    color: #d90429;
+    text-decoration: underline;
+}
+
+.rodape
+{
+    background-color: #020102;
+    color: #eeeded;
+    padding: 2rem 6%;
+    border-top: 2px solid #d90429;
+}
+
+.footer-contentor
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-contentor .logo
+{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-contentor .footer-box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+}
+
+.social a
+{
+    color: white;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.footer-box h3
+{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a
+{
+    color: #818181;
+    margin-bottom: 10px;
+}
+.footer-box a:hover{ color: #d90429;}
+
+.copy
+{
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+@media(max-width: 1080px)
+{
+    .contentor
+    {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+
+@media(max-width: 991px)
+{
+    .nav{   
+        padding: 15px 20px;
+    }
+
+    section{
+        padding: 3rem 0 1rem;
+    }
+
+    .texto
+    {
+        padding-left: 2rem;
+    }
+    .texto h1 { font-size: 2.1rem;}
+
+}
+
+@media(max-width: 920px)
+{
+    #pesquisa{
+        color: #020102;
+    }
+}
+
+@media(max-width: 775px)
+{
+    .bar-pesquisa i nput{
+        padding: 15px;
+    }
+    .nav
+    {
+        padding:10px 0;
+    }
+
+    #menu-btn
+    {
+        display: initial;
+        padding: 0 20px;
+    }
+    .navbar 
+    {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        row-gap: .5rem;
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(12 54 55 / 20%);
+        clip-path: circle(0% at 0% 0%);
+        transition: .5s ease-in-out;
+    }
+    .navbar a{
+        display: block;
+        padding: 15px;
+    }
+
+    .navbar a:hover,
+    .navbar .activo
+    {
+        border-bottom: none;
+        background: #d90429;
+        color: #fff ;
+    }
+
+    .navbar.active{
+        clip-path: circle(142% at 0% 0%);
+    }
+
+}
+
+@media(max-width: 730px)
+{
+    
+    .heading span{
+        font-size: .9rem;
+    }
+
+    .heading h2{
+        font-size: 1.4rem;
+    }
+
+    .destaque{
+        flex-direction: column-reverse;
+    }
+
+    .dest-texto{
+        text-align: center;
+    }
+
+    .dest-texto h2{
+        font-size: 1.4rem;
+    }
+}
+
+
+@media(max-width: 607px)
+{
+    .footer-contentor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 360px)
+{
+    .bar-pesquisa input{
+        padding: 11px;
+    }
+
+    .home
+    {
+        min-height: 500px;
+    }
+
+    .home h1{
+        font-size: 2rem;
+    }
+
+    .home p br{
+        display: contents;
+    }
+}
+
+/*__________ Scroll Bar_ ________________*/
+::-webkit-scrollbar
+{
+    background: #020102;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom,#fff,#020102); }
+/*______________________________________________*/

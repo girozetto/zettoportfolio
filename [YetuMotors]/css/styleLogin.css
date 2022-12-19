@@ -1,0 +1,284 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,40%),rgba(0,0,0,40%)),url('../img/Background-home.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 30px;
+}
+
+.contentor{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+
+.contentor .imgLado{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  /*transform-style: preserve-3d;*/
+}
+
+.contentor .imgLado::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.contentor .imgLado::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: 0.5;
+  z-index: 100;
+  transform: rotateY(180deg);
+}
+
+.contentor #folha:checked ~ .imgLado{
+  transform: rotateY(-180deg);
+}
+
+.contentor .imgLado img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: imgLado;
+  z-index: 12;
+  backface-visibility: hidden;
+}
+
+.contentor .imgLado .back .backImg{
+  transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.contentor .imgLado .texto{
+  position: absolute;
+  z-index: 111;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgLado .texto .texto-1,
+.imgLado .texto .texto-2{
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.imgLado .back .texto .texto-1,
+.imgLado .back .texto .texto-2{
+  transform: rotateY(180deg);
+}
+
+.imgLado .texto .texto-2{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contentor .formulario{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.contentor .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form{
+  width: calc(100% / 2 - 25px);
+}
+
+.formulario .form-content .titulo{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.formulario .form-content .titulo:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #c50000;
+}
+
+.formulario .signup-form  .titulo:before{
+  width: 20px;
+}
+
+.formulario .form-content .input-boxes{
+  margin-top: 30px;
+}
+
+.formulario .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: #e61616;
+}
+
+.form-content .input-box i{
+  position: absolute;
+  color: #252020;
+  font-size: 17px;
+}
+
+.formulario .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.formulario .form-content .text a{
+  text-decoration: none;
+  color: #313131;
+}
+
+.formulario .form-content .text a:hover{
+  text-decoration: underline;
+}
+
+.formulario .form-content .btn{
+  color: #fff;
+  margin-top: 40px;
+}
+
+.formulario .form-content .btn input{
+  color: #fff;
+  background: #d30a0a;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.formulario .form-content .btn input:hover{
+  background: #ff5b5b;
+}
+
+.formulario .form-content label{
+  color: #f01717;
+  cursor: pointer;
+}
+
+.formulario .form-content label:hover{
+  text-decoration: underline;
+}
+
+.formulario .form-content .login-text,
+.formulario .form-content .sign-up-texto{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.contentor #folha{
+  display: none;
+}
+
+.home
+{
+  position: absolute;
+  top: 86%;
+
+}
+
+.home i
+{
+
+    background: #fff;
+    color: #000000;
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    transition: .2s ease;
+}
+.home i:hover
+{
+    background:  #000000;
+    color:rgb(255, 255, 255);  
+}
+
+
+@media (max-width: 730px) {
+  .contentor .imgLado{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .contentor #folha:checked ~ .formulario .signup-form{
+    display: block;
+  }
+  .contentor #folha:checked ~ .formulario .login-form{
+    display: none;
+  }
+}
