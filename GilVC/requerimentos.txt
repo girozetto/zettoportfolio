@@ -2,3 +2,6 @@ Install Python3
 
 pip install flask
 pip install Flask-SocketIO
+
+Firstly execute server using: python gerenciador.py in terminal
+And then go to frontend and open one of the HTML file in browser.
