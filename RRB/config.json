@@ -1,0 +1,14 @@
+{
+    "DIM": {"largura":1360, "altura": 768},
+    "dimBAR" : {"x":0,"y":10,"largura": 100, "altura": 30},
+    "dimCol" : {"largura": 40, "altura": 5},
+    "tipoContador" : {"baixo": 90, "medio": 120, "alto": 180},
+    "gravidade" : 0.3,
+    "dimJog" : {"altura": 200, "largura": 80, "afastamento":10},
+    "acoes": {"andar":4, "correr": 10, "saltar": 10, "soco": 2, "pontape": 4, "semDano":0},
+    "contador":0,
+    "ratio":0.0,
+    "listaJogadores":[],
+    "imgs" : [{"nomeImagem":"giro1", "caminho": "1.png"}],
+    "controles": [{"cima":{"estado":false,"tecla":"w"},"baixo":{"estado":false,"tecla":"s"},"direita":{"estado":false,"tecla":"d"}, "esquerda":{"estado":false,"tecla":"a"}, "soco":{"estado":false,"tecla":"n"}, "pontape":{"estado":false,"tecla":"m"}},{"cima":{"estado":false,"tecla":"ArrowUp"},"baixo":{"estado":false,"tecla":"ArrowDown"},"direita":{"estado":false,"tecla":"ArrowRight"}, "esquerda":{"estado":false,"tecla":"ArrowLeft"}, "soco":{"estado":false,"tecla":"o"}, "pontape":{"estado":false,"tecla":"p"}}]
+}

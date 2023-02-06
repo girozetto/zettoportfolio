@@ -1,0 +1,7 @@
+
+tecla w -> saltar
+tecla d -> andar a direita
+tecla a -> andar a esquerda
+tecla s -> abaixar
+tecla n -> soco
+tecla m -> pontape
