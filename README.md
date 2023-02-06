@@ -11,5 +11,5 @@ Instagram: https://www.instagram.com/girozetto/<br>
 Facebook: https://www.facebook.com/profile.php?id=100080490026271<br>
 Twitter: https://twitter.com/Girozetto<br>
 E-mail: julbertoalexandredealmeida@gmail.com<br>
-Linkedin: https://www.linkedin.com/in/gilberto-alexandre-adao-430ba224a/
+Linkedin: https://www.linkedin.com/in/gilberto-alexandre-adao-430ba224a/<br>
 Fiverr: https://www.fiverr.com/girozetto
