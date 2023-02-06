@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vídeoconferência</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/biblioteca/bootstrap.min.css'>
+    <script src='/biblioteca/bootstrap.min.js'></script>
+    <script src='/biblioteca/jquery.min.js'></script>
+    <script src='/biblioteca/socket.io.js'></script>
+    <style>
+        .forma{
+            margin:20%;
+            width:40%;
+        }
+        .videotab {
+            display: grid;
+            grid-gap: 10px;
+            height: 80%;
+            position: relative;
+            grid-template-columns: repeat(auto-fill, 300px);
+            grid-auto-rows: 300px;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+        #estado h2{
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <script src=
+  "/biblioteca/peerjs.min.js"
+          >
+      </script>  
+  <div id="abalogin" class="cartao">
+        <form class="mx-auto forma row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-6">
+              <label class="visually-hidden" for="nome">Nome de Usuário</label>
+              <div class="input-group">
+                <div class="input-group-text">@</div>
+                <input type="text" class="form-control" id="nome" placeholder="Nome de Usuário">
+              </div>
+            </div>
+            <div class="col-6">
+                <label class="visually-hidden" for="passe">Palavra-Passe</label>
+                <div class="input-group">
+                  <div class="input-group-text">@</div>
+                  <input type="text" class="form-control" id="passe" placeholder="Palavra-Passe">
+                </div>
+              </div>
+          
+            <div class="col-2">
+              <button type="submit" id="botao" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+    </div>
+
+    <div id="estado" class="videoarea">
+      <h2>Telas de Conversa</h2>
+      <h2 id="logado"></h2>
+      <button type="submit" id="desconectar" class="btn btn-primary">Desconectar</button>
+      <div id="telas" class="videotab">
+      </div>
+    </div>
+      <script>
+        var ligacao = io();
+        const ponto = new Peer();
+        var meuTrans;
+        var meuId;
+        var eu={};
+        const conexPontos = {};
+        
+        var troca = false;
+        const lista = [];
+
+        $("#estado").hide();
+        $("#abalogin").show();
+        
+        $("#desconectar").click((e)=>{
+          e.preventDefault();
+          ligacao.emit("desconectar usuario");
+          mudar(troca);
+          troca=!troca;
+        });
+        
+        $("#botao").click(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: "dados.json",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    var i;
+                    if((i=login(data,$('#nome').val(),$('#passe').val()))>=0)
+                    {
+                      ligacao.emit('novo usuario',data[i].Nome,meuId);
+                    }
+                },
+                error: function () {
+                    console.log("Alguma coisa correu mal");
+                },
+            });
+        });
+        function adicionarVideo(transmissao,video)
+        {
+          video.srcObject = transmissao;
+          video.addEventListener("loadedmetadata",()=>{
+            video.play();
+          });
+          $("#telas").append(video);
+        }
+        function adicionarUsuario(usuario)
+        {
+            lista.push(usuario);
+            alert("Usuários Existentes "+lista.toString())
+        }
+        function removerUsuario(usuario)
+        {
+            lista.splice(lista.indexOf(usuario),1);
+            alert("Usuários Existentes "+lista.toString())
+        }
+        ligacao.on("usuario logado",(usuario)=>{
+          alert("O usuário "+usuario.nome+" logou");
+          eu = usuario;
+          $("logado").val("(Usuário: "+eu.nome+")");
+          mudar(troca);
+          troca=!troca;
+          navigator.mediaDevices.getUserMedia({
+          video:true,
+          audio:true
+        })
+        .then((transmissao)=>{
+          meuTrans=transmissao;
+          var meuvideo = document.createElement("video");
+          adicionarVideo(transmissao,meuvideo);
+          ponto.on("call",call=>{
+            call.answer(transmissao);
+            const vid = document.createElement("video");
+            call.on("stream",transuser=>{
+              adicionarVideo(transuser);
+            });
+            call.on("error",erro=>{
+              alert(erro);
+            });
+            call.on("close",()=>{
+              console.log(vid);
+              vid.remove();
+            });
+            conexPontos[call.peer] = call;
+          });
+        })
+        .catch(erro=>{
+          alert(erro.message);
+        });
+          
+        });
+        ligacao.on("usuario conectado",usuario=>{
+          adicionarUsuario(usuario);
+          const chamada = ponto.call(usuario.idPonto,meuTrans);
+          const vid = document.createElement("video");
+          chamada.on("error",(erro)=>{
+            alert(erro);
+          });
+          chamada.on("stream",(usuariotrans)=>{
+            adicionarVideo(usuariotrans,vid);
+          });
+          chamada.on("close",()=>{
+            vid.remove();
+          });
+          conexPontos[usuario.idPonto] = chamada;
+        });
+        ligacao.on("usuario desconectado",usuario=>{
+          if(conexPontos[usuario.idPonto])
+              conexPontos[usuario.idPonto].close();
+          removerUsuario(usuario);
+        });
+        function mudar(estado)
+        {
+          if(estado){
+            $("#estado").hide();
+            $("#abalogin").show();
+          }
+          else{
+            $("#abalogin").hide();
+            $("#estado").show();
+          }
+        }
+        function login(dados,user,pass){
+            for(var i=0;i<dados.length;i++)
+                if(dados[i].Nome===user && dados[i].Pass===pass)
+                    return i;
+            return -1;
+        }
+        
+      </script>
+</body>
+</html>

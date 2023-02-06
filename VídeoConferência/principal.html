@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>VideoConferencia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/biblioteca/bootstrap.min.css'>
+    <script src='biblioteca/jquery.min.js'></script>
+    <script src='biblioteca/socket.io.js'></script>
+    <script src='biblioteca/bootstrap.min.js'></script>
+    <style>
+        *{
+            width: 100%;
+        }
+        body{
+            height: auto;
+            max-height: 100%;
+            overflow-y: hidden;
+        }
+        .tela{
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="tela col-md-6">
+            <input type="text" id="espenv" placeholder="Envio mutuo">
+        </div>
+        <div class="participantes col-3 col-md-4">
+            <input type="submit" id="btnenv">
+        </div>
+    </div>
+    <script src="codigo/codigo.js"></script>
+</body>
+</html>
