@@ -1,0 +1,8 @@
+{
+    "endereco":"localhost",
+    "porta":"8111",
+    "modo":"Noite",
+    "database":"conferencia.db",
+    "debug":true,
+    "tabelas":["contas(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, telefone TEXT, senha TEXT, foto TEXT)"]
+}

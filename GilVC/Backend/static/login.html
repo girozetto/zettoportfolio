@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="biblioteca/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet" />
+    <title id="titulo">Sala - GilVC</title>
+    <script>var pag={lugar:"sala"}; var minhaSala;</script>
+    <script src="script/carregamento.js"></script>
+    <script src="biblioteca/jquery.min.js"></script>
+    <script src="biblioteca/peerjs.min.js"></script>
+    <script src="biblioteca/socket.io.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <button class="modo-trocar">
+            <svg class="sun" fill="none" stroke="#fbb046" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="feather feather-sun" viewBox="0 0 24 24">
+                <defs />
+                <circle cx="12" cy="12" r="5" />
+                <path
+                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+
+            <svg class="moon" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="feather feather-moon" viewBox="0 0 24 24">
+                <defs />
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+        </button>
+
+        <div class="lado-esquerdo">
+
+            <div class="navigation">
+
+                <a href="#" class="nav-link icon">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+
+                <a href="#" class="nav-link icon">
+                    <i class="fa-regular fa-message"></i>
+                </a>
+
+                <a id="deslogar" href="#" class="nav-link icon">
+                    <i class="fa-solid fa-door-open"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="app-main">
+            <div class="video-call-wrapper">
+            </div>
+
+            <div class="video-call-action">
+                <button class="video-action-button micro"></button>
+                <button class="video-action-button camera"></button>
+                <button class="video-action-button maximize"></button>
+                <button class="video-action-button endcall">Desligar</button>
+
+                <button class="video-action-button magnifer">
+
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>100%</span>
+                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+
+                </button>
+
+            </div>
+        </div>
+
+        <!--Lado Direito-->
+        <div class="lado-direito">
+            <button class="btn-close-right">
+                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+            </button>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <button class="chat-header-button">Live Chat</button>
+                </div>
+
+                <div class="chat-area">
+                </div>
+
+                <div class="chat-escrever-wrapper">
+                    <div class="chat-escrever-area">
+                        <input type="text" id="msg" placeholder="sua mensagem" class="chat-input">
+                        <button id="btnEnv" class="send-button">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <button class="expandir-btn"> <i class="fa-regular fa-comment"></i> </button>
+
+    </div>
+    <script src="script/chattexto.js"></script>
+    <script src="script/java.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <script>var pag={lugar:"login"};</script>
+    <script src="script/carregamento.js"></script>
+    <script src="biblioteca/jquery.min.js"></script>
+    <title>Login - GilVC</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form-box">
+            <h1 id="titulo">Iniciar Sessão</h1>
+
+            <form>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="telefone" placeholder="Telemóvel">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="senha" placeholder="password">
+                    </div>
+                    <p id="aviso"></p>
+                    <p>Não Tenho Uma Conta. <a href="registrar.html">Cadastre-se</a></p>
+                </div>
+
+                <div class="btn-field">
+                    <button type="button" id="btn-logar">Entrar</button>
+                </div>
+            </form>
+
+        </div>
+        <script src="script/login.js"></script>
+    </div>
+
+</body>
+
+</html>
